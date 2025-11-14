@@ -1,0 +1,212 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.block {
+  margin-bottom: 16px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 140px;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+.input-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 160px;
+}
+
+.suggestions {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  z-index: 20;
+  border-radius: 6px;
+  max-height: 180px;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.suggestions div {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.suggestions div:hover {
+  background-color: #f0f0f0;
+}
+
+.frequent button {
+  background: #e5e7eb;
+  color: #333;
+  margin: 3px;
+  border: 1px solid #ccc;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+/* таблица */
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+.routes-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* фиксированная ширина колонок */
+.routes-table th:nth-child(1),
+.routes-table td:nth-child(1) { width: 80px; }   /* Дата */
+.routes-table th:nth-child(2),
+.routes-table td:nth-child(2) { width: 85px; }  /* Время прибытия */
+.routes-table th:nth-child(3),
+.routes-table td:nth-child(3) { width: 140px; }  /* Станция прибытия */
+.routes-table th:nth-child(4),
+.routes-table td:nth-child(4) { width: 60px; }  /* Заметка */
+.routes-table th:nth-child(5),
+.routes-table td:nth-child(5) { width: 80px; }   /* Дата */
+.routes-table th:nth-child(6),
+.routes-table td:nth-child(6) { width: 85px; }  /* Время отправления */
+.routes-table th:nth-child(7),
+.routes-table td:nth-child(7) { width: 140px; }  /* Станция отправления */
+.routes-table th:nth-child(8),
+.routes-table td:nth-child(8) { width: 60px; }  /* Заметка */
+.routes-table th:nth-child(9),
+.routes-table td:nth-child(9) { width: 75px; }  /* Номер поезда */
+.routes-table th:nth-child(10),
+.routes-table td:nth-child(10) { width: 80px; }  /* Кнопка удалить */
+
+.routes-table th,
+.routes-table td {
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  min-width: 0;
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.routes-table th {
+  background-color: #f8fafc;
+  font-weight: 600;
+}
+
+/* Чередование строк */
+.routes-table tbody tr.even-row {
+  background-color: #ffffff !important;
+}
+.routes-table tbody tr.odd-row {
+  background-color: #e1adff !important;
+}
+.routes-table tbody tr:hover {
+  background-color: #e6f0ff !important;
+  transition: background-color 0.2s ease;
+}
+
+/* Инпуты внутри таблицы */
+.routes-table input {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 4px;
+  margin: 0;
+  border: 1px solid transparent; /* чтобы ширина не прыгала */
+  background: transparent;
+  text-align: center;
+  font: inherit;
+  outline: none;
+  overflow: hidden;
+}
+
+/* При фокусе — только фон и outline (без смещения) */
+.routes-table input:focus {
+  background-color: #fff9e6;
+  border-color: transparent;
+  outline: 2px solid rgba(255, 183, 77, 0.6);
+  box-shadow: none;
+}
+
+/* Кнопка удалить */
+.delete-btn {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* адаптив */
+@media (max-width: 520px) {
+  .container { padding: 12px; margin: 12px; }
+  .routes-table { font-size: 12px; min-width: 800px; }
+  input { min-width: 100px; }
+}
+
+.export-btn {
+  background-color: #134b0e;
+  color: white;
+  border: none;
+  margin-top: 5px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
