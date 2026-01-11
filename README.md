@@ -105,3 +105,5 @@ Frontend: http://localhost
 
 > Database: SQLite (volumes)
 
+## 📄 Лицензия
+MIT License
