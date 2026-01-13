@@ -118,8 +118,8 @@ TICKETS-APP/
 
 ## 📚 Документация
 
-- Swagger UI: http://localhost:8080/swagger
-- Полная документация API: docs/api-reference.md
+- Swagger UI: http://localhost:8080/swagger — автогенерируемая документация API (OpenAPI)
+- Полная документация API (ручная): docs/api-reference.md
 
 ## ⚠️ Ограничения
 
